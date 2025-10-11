@@ -1,11 +1,12 @@
 {
-  "name": "dev-marketplace",
-  "owner": "local",
+  "name": "telecom-ops-marketplace",
+  "owner": { "name": "thc1006" },
   "plugins": [
     {
       "name": "telecom-ops",
-      "description": "Local telecom-ops plugin for O-RAN/Nephio demos",
-      "source": "../telecom-ops"
+      "description": "O-RAN/Nephio demo plugin (commands, agent, hooks, MCP stub).",
+      "source": "./telecom-ops",
+      "strict": true
     }
   ]
 }
