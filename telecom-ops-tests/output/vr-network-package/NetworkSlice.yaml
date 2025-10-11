@@ -1,0 +1,86 @@
+apiVersion: nephio.org/v1alpha1
+kind: NetworkSlice
+metadata:
+  name: vr-network-slice
+  namespace: default
+  labels:
+    service: vr-network
+    environment: test
+    ue-count: single
+spec:
+  # 切片識別
+  sliceId: "vr-network-test-001"
+
+  # S-NSSAI
+  snssai:
+    sst: 1  # eMBB
+    sd: "000001"
+
+  # 服務描述
+  description: "VR network slice - single UE test with 5Mbps DL and 9ms latency"
+
+  # 網路切片類型
+  networkSliceType: eMBB
+
+  # 覆蓋區域
+  coverageArea:
+    - name: "test-lab"
+      type: "indoor"
+
+  # 服務等級目標（SLO）
+  slo:
+    latency:
+      target: 9
+      unit: ms
+
+    bandwidth:
+      downlink:
+        target: 5
+        unit: Mbps
+      uplink:
+        target: 1
+        unit: Mbps
+
+    reliability: 99.9
+    availability: 99.99
+
+  # 用戶設備數量
+  maxUEs: 1  # 單 UE 測試
+
+  # QoS 意圖引用
+  qosIntentRef:
+    name: vr-network-qos
+    namespace: default
+
+  # 網路功能需求
+  networkFunctions:
+    - name: amf
+      type: AMF
+      required: true
+
+    - name: smf
+      type: SMF
+      required: true
+
+    - name: upf
+      type: UPF
+      required: true
+      profile: high-throughput
+
+    - name: pcf
+      type: PCF
+      required: true
+
+  # 資源配置
+  resources:
+    compute:
+      cpu: "2"
+      memory: "4Gi"
+
+    storage:
+      size: "10Gi"
+
+  # 生命週期策略
+  lifecyclePolicy:
+    activationTime: "immediate"
+    deactivationTime: "on-demand"

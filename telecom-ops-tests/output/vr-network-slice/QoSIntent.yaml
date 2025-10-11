@@ -1,0 +1,54 @@
+apiVersion: nephio.org/v1alpha1
+kind: QoSIntent
+metadata:
+  name: vr-network-qos
+  namespace: default
+  labels:
+    slice-type: embb
+    service: vr-network
+spec:
+  # Service intent
+  description: "VR network slice for single UE demonstration"
+
+  # S-NSSAI mapping
+  snssai:
+    sst: 1  # eMBB (enhanced Mobile Broadband)
+    sd: "000001"  # VR service differentiator
+
+  # QoS Flow parameters
+  qosProfile:
+    # 5G QoS Identifier - 7 for video streaming (GBR)
+    fiveQI: 7
+
+    # Priority (1-127, lower = higher priority)
+    priority: 20
+
+    # Packet Delay Budget (ms)
+    packetDelayBudget: 9
+
+    # Packet Error Rate
+    packetErrorRate: 1.0e-3
+
+  # Bandwidth requirements
+  bandwidth:
+    # Downlink
+    downlink:
+      guaranteed: "5Mbps"
+      maximum: "10Mbps"
+
+    # Uplink (estimated for VR control/feedback)
+    uplink:
+      guaranteed: "1Mbps"
+      maximum: "2Mbps"
+
+  # Traffic characteristics
+  trafficType: GBR  # Guaranteed Bit Rate
+
+  # Resource allocation type
+  resourceType: dedicated
+
+  # ARP (Allocation and Retention Priority)
+  arp:
+    priorityLevel: 2
+    preemptionCapability: MAY_PREEMPT
+    preemptionVulnerability: NOT_PREEMPTABLE

@@ -1,0 +1,85 @@
+apiVersion: nephio.org/v1alpha1
+kind: NetworkSlice
+metadata:
+  name: vr-network-slice
+  namespace: default
+  labels:
+    service: vr-network
+    environment: demo
+spec:
+  # Slice identification
+  sliceId: "vr-network-001"
+
+  # S-NSSAI
+  snssai:
+    sst: 1  # eMBB
+    sd: "000001"
+
+  # Service description
+  description: "VR network slice for single UE demonstration with 5Mbps downlink and 9ms latency"
+
+  # Network Slice Type
+  networkSliceType: eMBB
+
+  # Coverage area (example - adjust as needed)
+  coverageArea:
+    - name: "demo-area"
+      type: "indoor"
+
+  # Service Level Objectives
+  slo:
+    latency:
+      target: 9
+      unit: ms
+
+    bandwidth:
+      downlink:
+        target: 5
+        unit: Mbps
+      uplink:
+        target: 1
+        unit: Mbps
+
+    reliability: 99.9
+    availability: 99.99
+
+  # User equipment
+  maxUEs: 1  # Single UE demo
+
+  # QoS reference
+  qosIntentRef:
+    name: vr-network-qos
+    namespace: default
+
+  # Network function requirements
+  networkFunctions:
+    - name: amf
+      type: AMF
+      required: true
+
+    - name: smf
+      type: SMF
+      required: true
+
+    - name: upf
+      type: UPF
+      required: true
+      profile: high-throughput
+
+    - name: pcf
+      type: PCF
+      required: true
+
+  # Resource allocation
+  resources:
+    compute:
+      cpu: "2"
+      memory: "4Gi"
+
+    storage:
+      size: "10Gi"
+
+  # Lifecycle
+  lifecyclePolicy:
+    activationTime: "immediate"
+    deactivationTime: "on-demand"

@@ -1,0 +1,55 @@
+apiVersion: nephio.org/v1alpha1
+kind: QoSIntent
+metadata:
+  name: vr-network-qos
+  namespace: default
+  labels:
+    slice-type: embb
+    service: vr-network
+    test-type: single-ue
+spec:
+  # 服務意圖描述
+  description: "VR network slice for single UE test - 5Mbps downlink, 9ms latency"
+
+  # S-NSSAI 映射
+  snssai:
+    sst: 1  # eMBB (enhanced Mobile Broadband)
+    sd: "000001"  # VR 服務區分碼
+
+  # QoS 流量參數
+  qosProfile:
+    # 5G QoS 識別碼 - 7 為視頻串流（GBR）
+    fiveQI: 7
+
+    # 優先級（1-127，數字越小優先級越高）
+    priority: 20
+
+    # 封包延遲預算（ms）
+    packetDelayBudget: 9
+
+    # 封包錯誤率
+    packetErrorRate: 1.0e-3
+
+  # 帶寬需求
+  bandwidth:
+    # 下行
+    downlink:
+      guaranteed: "5Mbps"
+      maximum: "10Mbps"
+
+    # 上行（VR 控制與反饋用）
+    uplink:
+      guaranteed: "1Mbps"
+      maximum: "2Mbps"
+
+  # 流量特性
+  trafficType: GBR  # Guaranteed Bit Rate
+
+  # 資源分配類型
+  resourceType: dedicated
+
+  # ARP（分配與保留優先級）
+  arp:
+    priorityLevel: 2
+    preemptionCapability: MAY_PREEMPT
+    preemptionVulnerability: NOT_PREEMPTABLE
