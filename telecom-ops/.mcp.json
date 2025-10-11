@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "telecom-cli": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/scripts/telecom-mcp-server.sh",
+      "args": [],
+      "env": {
+        "EXAMPLE_ENV": "value"
+      }
+    }
+  }
+}

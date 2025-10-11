@@ -1,0 +1,12 @@
+{
+  "name": "telecom-ops",
+  "version": "0.0.1",
+  "description": "Minimal plugin for telecom operations based on O-RAN and Nephio concepts. Provides slash commands and an agent for intent translation.",
+  "author": {
+    "name": "Telecom Plugin Developer"
+  },
+  "commands": "./commands",
+  "agents": "./agents",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json"
+}

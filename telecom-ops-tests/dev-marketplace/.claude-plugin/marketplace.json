@@ -1,0 +1,11 @@
+{
+  "name": "dev-marketplace",
+  "owner": "local",
+  "plugins": [
+    {
+      "name": "telecom-ops",
+      "description": "Local telecom-ops plugin for O-RAN/Nephio demos",
+      "source": "../telecom-ops"
+    }
+  ]
+}
